@@ -38,7 +38,7 @@ public class StringFinder {
         // if the inputs are empty or null -1
         if(firstString==null || secondString==null || searchString==null || firstString.equals("") || secondString.equals("") || searchString.equals("") ) return -1;
         //if its equal 1
-        else if( searchString.contains(firstString+secondString) ||(firstString+secondString).equals(searchString)) return 1;
+        else if( searchString.contains(firstString) && searchString.contains(secondString) && (searchString.indexOf(secondString)>searchString.lastIndexOf(firstString)) ) return 1;
         //if not found as expected 0
         else return 0;
     }
